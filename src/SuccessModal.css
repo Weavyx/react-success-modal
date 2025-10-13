@@ -1,0 +1,276 @@
+/* Shared button styles */
+.success-modal-btn,
+.success-modal-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 0.5rem;
+  font-family: var(--font-family, inherit);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  box-sizing: border-box;
+  user-select: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.success-modal-btn--primary,
+.success-modal-link--primary {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(102, 126, 234, 0.3);
+}
+
+.success-modal-btn--primary:hover:not(:disabled),
+.success-modal-link--primary:hover {
+  transform: translateY(-2px);
+}
+
+.success-modal-btn--secondary,
+.success-modal-link--secondary {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.success-modal-btn--secondary:hover:not(:disabled),
+.success-modal-link--secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.success-modal-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Modal overlay and container */
+.success-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Modal container */
+.success-modal {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  max-width: 500px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px) scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Modal header */
+.success-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem 0;
+  color: white;
+}
+
+.success-modal__title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+}
+
+.success-modal__close-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.success-modal__close-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.success-modal__close-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Modal content */
+.success-modal__content {
+  padding: 1rem 2rem 2rem;
+}
+
+/* Success message */
+.success-message {
+  text-align: center;
+  color: white;
+}
+
+.success-message__icon {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.success-message__title {
+  margin: 0 0 1rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: white;
+}
+
+.success-message__description {
+  margin: 0 0 2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Employee info */
+.success-message__employee-info {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  text-align: left;
+}
+
+.success-message__info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.success-message__info-row:last-child {
+  margin-bottom: 0;
+}
+
+.success-message__info-label {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  flex-shrink: 0;
+  min-width: 120px;
+}
+
+.success-message__info-value {
+  font-weight: 500;
+  color: white;
+  text-align: right;
+  word-break: break-word;
+}
+
+/* Actions */
+.success-message__actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .success-modal-overlay {
+    padding: 1rem 0.5rem;
+  }
+
+  .success-modal {
+    max-width: 100%;
+    margin: 0 0.5rem;
+  }
+
+  .success-modal__header {
+    padding: 1rem 1.5rem 0;
+  }
+
+  .success-modal__content {
+    padding: 1rem 1.5rem 1.5rem;
+  }
+
+  .success-modal__title {
+    font-size: 1.25rem;
+  }
+
+  .success-message__title {
+    font-size: 1.5rem;
+  }
+
+  .success-message__info-row {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .success-message__info-label {
+    min-width: auto;
+  }
+
+  .success-message__info-value {
+    text-align: left;
+  }
+
+  .success-message__actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .success-modal-btn,
+  .success-modal-link {
+    width: 100%;
+    max-width: 250px;
+  }
+}
