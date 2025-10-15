@@ -5,8 +5,10 @@
   "description": "A reusable success modal component for React",
   "main": "dist/index.umd.cjs",
   "module": "dist/index.js",
+  "types": "index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "index.d.ts"
   ],
   "type": "module",
   "scripts": {
@@ -44,9 +46,16 @@
   "style": "dist/index.css",
   "sideEffects": ["*.css"],
   "keywords": ["react", "modal", "success", "employee", "ui", "component"],
+  "homepage": "https://github.com/Weavyx/react-success-modal#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/Weavyx/react-success-modal"
+  },
+  "bugs": {
+    "url": "https://github.com/Weavyx/react-success-modal/issues"
+  },
+  "engines": {
+    "node": ">=16.0.0"
   },
   "author": "Maxime Nardelli (Weavyx)",
   "license": "MIT"

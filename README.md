@@ -1,33 +1,35 @@
-# @weavyx/react-success-modal# React + Vite
+# @weavyx/react-success-modal
 
-[![npm version](https://img.shields.io/npm/v/@weavyx/react-success-modal.svg)](https://www.npmjs.com/package/@weavyx/react-success-modal)This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
+[![npm version](https://img.shields.io/npm/v/@weavyx/react-success-modal.svg)](https://www.npmjs.com/package/@weavyx/react-success-modal)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Bundle Size](https://img.shields.io/bundlephobia/minzip/@weavyx/react-success-modal)](https://bundlephobia.com/package/@weavyx/react-success-modal)
 
-[![Bundle Size](https://img.shields.io/bundlephobia/minzip/@weavyx/react-success-modal)](https://bundlephobia.com/package/@weavyx/react-success-modal)Currently, two official plugins are available:
-
-> 🎉 A beautiful, lightweight and customizable success modal component for React applications- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> 🎉 A beautiful, lightweight and customizable success modal component for React applications with full TypeScript support
 
 ## ✨ Features
 
-## React Compiler
-
-- 🚀 **Lightweight** - Only ~9.5KB minified (3.8KB CSS + 9.5KB JS)
-
-- 🎨 **Beautiful Design** - Modern gradient background with smooth animations The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
+- 🚀 **Lightweight** - Only ~9.5KB minified (3.7KB CSS + 9.5KB JS) + TypeScript definitions
+- 🎨 **Beautiful Design** - Modern gradient background with smooth animations
 - 📱 **Responsive** - Works perfectly on desktop and mobile devices
-
-- ⌨️ **Keyboard Support** - ESC key to close, proper focus management## Expanding the ESLint configuration
-
+- ⌨️ **Keyboard Support** - ESC key to close, proper focus management
 - 🔧 **Easy Integration** - Works with any React routing system
-
-- 🎯 **TypeScript Ready** - Full TypeScript support includedIf you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
+- 🎯 **TypeScript Ready** - Full TypeScript support included
 - ♿ **Accessible** - WCAG compliant with proper ARIA labels
 - 🎭 **Customizable** - Flexible callback system for custom actions
+
+## 📋 Prerequisites
+
+- **Node.js**: Version 16.0.0 or higher
+- **React**: Version 18.0.0 or 19.x
+- **Package Manager**: npm, yarn, or pnpm
+
+## 🛠️ Development Environment
+
+**Recommended:**
+
+- **IDE**: VS Code with React extensions
+- **Node.js**: v16+ (LTS recommended)
+- **Package Manager**: npm v8+ / yarn v1.22+ / pnpm v7+
 
 ## 📦 Installation
 
@@ -43,7 +45,29 @@ yarn add @weavyx/react-success-modal
 pnpm add @weavyx/react-success-modal
 ```
 
-## 🚀 Quick Start
+## � TypeScript Support
+
+This package includes full TypeScript definitions! Even if you're using JavaScript, you'll get:
+
+- ✅ **IntelliSense** - Auto-completion in VS Code
+- ✅ **Type hints** - See available props while typing
+- ✅ **Error detection** - Catch prop mistakes early
+- ✅ **Better docs** - Hover to see prop descriptions
+
+```typescript
+// Types are automatically available
+import SuccessModal, { EmployeeData } from '@weavyx/react-success-modal';
+
+const employee: EmployeeData = {
+  firstName: 'John',
+  lastName: 'Doe'
+  // VS Code will suggest other available properties!
+};
+```
+
+> **Note:** TypeScript definitions add only 1.3KB to the package size while providing excellent developer experience.
+
+## �🚀 Quick Start
 
 ```jsx
 import React, { useState } from 'react';
@@ -249,9 +273,10 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 | File | Size | Gzipped |
 |------|------|---------|
-| CSS | 3.8KB | 1.15KB |
+| CSS | 3.7KB | 1.15KB |
 | JS (ES) | 19.7KB | 4.65KB |
 | JS (UMD) | 9.5KB | 3.45KB |
+| Types (TS) | 1.3KB | - |
 
 ## 🔗 Links
 
