@@ -1,7 +1,7 @@
 {
   "name": "@weavyx/react-success-modal",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A reusable success modal component for React",
   "main": "dist/index.umd.cjs",
   "module": "dist/index.js",
@@ -44,8 +44,17 @@
     }
   },
   "style": "dist/index.css",
-  "sideEffects": ["*.css"],
-  "keywords": ["react", "modal", "success", "employee", "ui", "component"],
+  "sideEffects": [
+    "*.css"
+  ],
+  "keywords": [
+    "react",
+    "modal",
+    "success",
+    "employee",
+    "ui",
+    "component"
+  ],
   "homepage": "https://github.com/Weavyx/react-success-modal#readme",
   "repository": {
     "type": "git",
