@@ -98,7 +98,7 @@ function SuccessModal({
             type="button"
             className="success-modal__close-button"
             onClick={onClose}
-            aria-label="Fermer la modale"
+            aria-label="Close modal"
           >
             <span className="success-modal__close-icon">×</span>
           </button>
